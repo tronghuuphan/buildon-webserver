@@ -20,5 +20,5 @@ class TrackingAdmin(admin.ModelAdmin):
 
 @admin.register(PersonLog)
 class PersonLogAdmin(admin.ModelAdmin):
-    list_display = ['idPeople', 'mask', 'idCam', 'date', 'time']
+    list_display = ['idPeople', 'mask', 'idCam', 'date', 'time', 'image']
     ordering = ['idPeople']

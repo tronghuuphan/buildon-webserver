@@ -22,6 +22,7 @@ class PersonLog(models.Model):
     idCam = models.ForeignKey('Camera', on_delete=models.CASCADE)
     date = models.DateField(auto_now_add=True)
     time = models.TimeField(auto_now_add=True)
+    image = models.CharField(max_length=255, null=True)
 ##
 
 class Tracking(models.Model):

@@ -24,4 +24,4 @@ class PersonLogSerializer(serializers.ModelSerializer):
     idPeople = PersonSerializer()
     class Meta:
         model = PersonLog
-        fields = ('id', 'idPeople', 'mask', 'idCam', 'date', 'time')
+        fields = ('id', 'idPeople', 'mask', 'idCam', 'date', 'time', 'image')
