@@ -1,5 +1,5 @@
 from django.contrib import admin
-from LogApp.models import Person, Camera, Tracking
+from LogApp.models import Person, Camera, Tracking, PersonLog
 # Register your models here.
 
 
@@ -15,5 +15,10 @@ class CameraAdmin(admin.ModelAdmin):
 
 @admin.register(Tracking)
 class TrackingAdmin(admin.ModelAdmin):
-    list_display = ['idPeople', 'idCam', 'idContact', 'time']
+    list_display = ['idPeople', 'idCam', 'idContact','date', 'time']
+    ordering = ['idPeople']
+
+@admin.register(PersonLog)
+class PersonLogAdmin(admin.ModelAdmin):
+    list_display = ['idPeople', 'mask', 'idCam', 'date', 'time']
     ordering = ['idPeople']
